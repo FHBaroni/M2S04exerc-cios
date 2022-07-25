@@ -23,6 +23,10 @@
             this.ValorMulta = ValorMulta;
         }
 
+        /*Criar método privado CalculdarIdade na FichaInscricao
+        Método deve ser privado e deve calcular a idade da pessoa.
+Método deve ser executado no construtor ao receber a Data Nascimento*/
+        CalculdarIdade() { }
     }
 }
 
