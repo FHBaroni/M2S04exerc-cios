@@ -11,7 +11,7 @@
         public decimal ValorDesconto { get; set; }
         public decimal ValorMulta { get; set; }
 
-        public FichaInscrição()
+        public FichaInscrição(string Nome, string Curso, int Idade, string Escolaridade, DateTime DataNascimento, decimal ValorCurso, decimal ValorDesconto, decimal ValorMulta)
         {
             this.Nome = Nome;
             this.Curso = Curso;
