@@ -15,7 +15,7 @@
         {
             this.Nome = Nome;
             this.Curso = Curso;
-            this.Idade = Idade;
+            this.Idade = CalculdarIdade();
             this.Escolaridade = Escolaridade;
             this.DataDeNascimento = DataDeNascimento;
             this.ValorDoCurso = ValorDoCurso;
@@ -23,10 +23,17 @@
             this.ValorMulta = ValorMulta;
         }
 
-        /*Criar método privado CalculdarIdade na FichaInscricao
-        Método deve ser privado e deve calcular a idade da pessoa.
-Método deve ser executado no construtor ao receber a Data Nascimento*/
-        CalculdarIdade() { }
+
+        private CalculdarIdade(DateTime DataDeNascimento)
+        {
+            int idade = 0;
+            idade = DateTime.Today.year - DataDeNascimento.Year;
+            if (DateTime.Today.DayofYear < DataDeNascimento.DayofYear)
+            {
+                idade -= 1;
+            }
+            return idade;
+        }
     }
 }
 
